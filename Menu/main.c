@@ -11,12 +11,14 @@
 
 
 void exit(void);
+void welcome(void);
 
 
 void main(void) {
-	int lvl;
+	int lvl=0;
 
 
+	welcome();
 	while (lvl!=0) //菜单
 	{
 		switch (lvl) {
@@ -33,21 +35,28 @@ void main(void) {
 
 
 		default:
-			
+			break;
 		}
 	}
 
 
-	exit();
 }
 
 
+void welcome() {
+	system("cls");
+	printf("~~~~~~~~~~Welcome~~~~~~~~~~\n");
+	printf("Press ENTER to start.\n");
+	getchar();
+}
+
+//程序结束时必然会执行exit方法 可重写
 void exit() {
-	char confirm;
+	char confirm=1;
 
 
 	printf("确定要退出吗？ Y/N");
-	getchar(&confirm);
+	confirm = getchar();
 	switch (confirm)
 	{
 	case 'Y':
@@ -59,6 +68,8 @@ void exit() {
 
 
 	default:
-		break;
+		system("cls");
+		printf("Fail!Wrong input.");
+		exit();
 	}
 }
