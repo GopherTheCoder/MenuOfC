@@ -15,27 +15,27 @@ void welcome(void);
 
 
 void main(void) {
-	int lvl=0;
+	char lvl=0;
+	char chapter = 0;
 
 
 	welcome();
-	while (lvl!=0) //菜单
-	{
+	while (lvl!=0) { //菜单
 		switch (lvl) {
-		case 1:
-			break;
+			case 1:
+				chapter = levelOne();
 
 
-		case 2:
-			break;
+			case 2:
+				break;
 
 
-		case 3:
-			break;
+			case 3:
+				break;
 
 
-		default:
-			break;
+			default:
+				break;
 		}
 	}
 
@@ -55,21 +55,20 @@ void exit() {
 	char confirm=1;
 
 
-	printf("确定要退出吗？ Y/N");
+	printf("确定要退出吗？ Y/N\n");
 	confirm = getchar();
-	switch (confirm)
-	{
-	case 'Y':
-		break;
+	switch (confirm) {
+		case 'Y':
+			break;
 
 
-	case 'N':
-		break;
+		case 'N'://返回上一页面
+			break;
 
 
-	default:
-		system("cls");
-		printf("Fail!Wrong input.");
-		exit();
+		default:
+			system("cls");
+			printf("Fail! Input illegal.\n");
+			exit();
 	}
 }
