@@ -15,10 +15,10 @@ char levelTwo(char ch) { //return用户选项，改变lvl全局变量
 	/* 读取用户选择 */
 	system("cls");
 	choose:
-	printf("~~~~~~~~~~请选择题目~~~~~~~~~~\n");
+	printf("**********请选择题目**********\n");
 	printf_s("第%hhd章\n", ch);
 	printf("本章共有%d道题目\n", problemNumber);
-	printf("输入题号以进入题目 -1:返回上级 0:退出程序\n");
+	printf("输入题号以进入题目\n-1.返回上级\n0.退出程序\n");
 	scanf_s("%hhd", &choice);
 
 
@@ -37,7 +37,7 @@ char levelTwo(char ch) { //return用户选项，改变lvl全局变量
 		}
 	} else {
 		system("cls");
-		printf("Fail! Input illegal.\n");
+		printf("错误！ 非法输入！ 请重新输入\n");
 		goto choose;
 	}
 }

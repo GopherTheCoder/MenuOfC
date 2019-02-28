@@ -13,8 +13,9 @@ char levelOne() { // return用户选项，改变lvl全局变量
 	/* 读取用户选择 */
 	system("cls");
 	choose:
-	printf("~~~~~~~~~~请选择章节~~~~~~~~~~\n");
-	printf("共13章\n");
+	printf("**********请选择章节**********\n");
+	printf("本书共13章\n");
+	printf("输入数字以选择对应章节\n");
 	printf("输入0退出程序\n");
 	scanf_s("%hhd", &choice);
 
@@ -31,7 +32,7 @@ char levelOne() { // return用户选项，改变lvl全局变量
 		}
 	} else {
 		system("cls");
-		printf("Fail! Input illegal.\n");
+		printf("错误！ 非法输入！ 请重新输入\n");
 		goto choose;
 	}
 }

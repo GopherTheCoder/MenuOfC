@@ -53,7 +53,7 @@ void levelThree(char ch, char prob) {
 
 		default:
 			system("cls");
-			printf("Fail! Input illegal.\n");
+			printf("错误！ 非法输入！ 请重新输入\n");
 			goto choose;
 	}
 }

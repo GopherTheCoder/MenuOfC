@@ -49,8 +49,9 @@ void main(void) {
 
 void welcome() {
 	system("cls");
-	printf("~~~~~~~~~~Welcome~~~~~~~~~~\n");
-	printf("Press ENTER to start.\n");
+	printf("**********Welcome**********\n");
+	printf("C语言程序设计全书编程题答案目录\n");
+	printf("按下回车以开始。。。\n");
 	getchar();
 }
 
@@ -74,7 +75,7 @@ void exit() {
 
 		default:
 			system("cls");
-			printf("Fail! Input illegal.\n");
+			printf("错误！ 非法输入！ 请重新输入\n");
 			exit(); //尾递归漏洞？
 	}
 }
