@@ -56,10 +56,12 @@ void welcome() {
 //程序结束时必然会执行exit方法 可重写
 void exit() {
 	char confirm=1;
+	char c;
 
 
 	printf("确定要退出吗？ Y/N\n");
-	confirm = getchar(); // 需要清除屏幕缓冲区
+	while ((c = getchar()) != EOF && c != '\n'); // 清除缓冲区
+	confirm = getchar();
 	switch (confirm) {
 		case 'Y':
 			break;
