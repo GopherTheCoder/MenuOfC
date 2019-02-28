@@ -33,6 +33,7 @@ void main(void) {
 
 
 			case 3:
+				levelThree(chapter, problem);
 				break;
 
 

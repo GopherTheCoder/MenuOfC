@@ -1,6 +1,5 @@
 #ifndef levelOne_h
 #define levelOne_h
-#define levelOneMainMenu "1.第一章\n2.第二章\n3.第三章\n0.退出程序\n"
 
 
 char levelOne(void);
@@ -15,7 +14,8 @@ char levelOne() { // return用户选项，改变lvl全局变量
 	system("cls");
 	choose:
 	printf("~~~~~~~~~~请选择章节~~~~~~~~~~\n");
-	printf(levelOneMainMenu);
+	printf("共13章\n");
+	printf("输入0退出程序\n");
 	scanf_s("%hhd", &choice);
 
 
