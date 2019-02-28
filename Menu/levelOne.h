@@ -8,7 +8,7 @@ char levelOne(void);
 
 char levelOne() { // return用户选项，改变lvl全局变量
 	extern char lvl;
-	char choice = 0, choice_status = 0; // 0:不合法/初始态 1:合法
+	char choice = -1, choice_status = 0; // 0:不合法/初始态 1:合法
 
 
 	/* 读取用户选择 */

@@ -59,7 +59,7 @@ void exit() {
 
 
 	printf("确定要退出吗？ Y/N\n");
-	confirm = getchar();
+	confirm = getchar(); // 需要清除屏幕缓冲区
 	switch (confirm) {
 		case 'Y':
 			break;
