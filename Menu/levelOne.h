@@ -6,11 +6,12 @@
 char levelOne(void);
 
 
-char levelOne() { //return用户选项，改变lvl全局变量
+char levelOne() { // return用户选项，改变lvl全局变量
 	extern char lvl;
-	char choice = 0;
+	char choice = 0, choice_status = 0; // 0:不合法/初始态 1:合法
 
 
+	/* 读取用户选择 */
 	system("cls");
 	choose:
 	printf("~~~~~~~~~~请选择章节~~~~~~~~~~\n");
@@ -18,31 +19,20 @@ char levelOne() { //return用户选项，改变lvl全局变量
 	scanf_s("%hhd", &choice);
 
 
-	switch (choice)	{
-		case 1:
-			lvl = 2;
-			return 1;
-
-
-		case 2:
-			lvl = 2;
-			return 2;
-
-
-		case 3:
-			lvl = 2;
-			return 3;
-
-
-		case 0:
+	/* 传回用户选择 */
+	(choice >= 0 && choice <= 13) ? (choice_status = 1) : (choice_status = 0); // 判断输入是否合法
+	if (choice_status) {
+		if (choice == 0) {
 			lvl = 0;
 			return 0;
-
-
-		default:
-			system("cls");
-			printf("Fail! Input illegal.\n");
-			goto choose;
+		} else {
+			lvl = 2;
+			return choice;
+		}
+	} else {
+		system("cls");
+		printf("Fail! Input illegal.\n");
+		goto choose;
 	}
 }
 

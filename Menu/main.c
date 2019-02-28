@@ -12,11 +12,11 @@
 
 void exit(void);
 void welcome(void);
+char lvl = 1;
 
 
 void main(void) {
-	char lvl=0;
-	char chapter = 0;
+	char chapter = 0, problem = 0;
 
 
 	welcome();
@@ -24,9 +24,11 @@ void main(void) {
 		switch (lvl) {
 			case 1:
 				chapter = levelOne();
+				break;
 
 
 			case 2:
+				problem = levelTwo(chapter);
 				break;
 
 
@@ -40,6 +42,7 @@ void main(void) {
 	}
 
 
+	system("cls");
 }
 
 
@@ -69,6 +72,6 @@ void exit() {
 		default:
 			system("cls");
 			printf("Fail! Input illegal.\n");
-			exit();
+			exit(); //Î²µÝ¹éÂ©¶´£¿
 	}
 }
