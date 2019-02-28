@@ -34,7 +34,8 @@ void levelThree(char ch, char prob) {
 
 
 		case 1:
-			sprintf_s(str, "\\static\\exe\\%d_%d.exe", ch, prob);
+			sprintf(str, ".\\static\\exe\\%d_%d.exe", ch, prob);
+			system("cls");
 			system(str);
 			system("cls");
 			goto choose;
@@ -42,8 +43,10 @@ void levelThree(char ch, char prob) {
 
 		case 2: // 需要整理一下
 			system("cls");
-			sprintf_s(str, "type .\\static\\codes\\%d_%d.c", ch, prob);
+			sprintf(str, "type .\\static\\codes\\%d_%d.c", ch, prob);
 			system(str);
+			printf("\n");
+			system("pause");
 			system("cls");
 			goto choose;
 
