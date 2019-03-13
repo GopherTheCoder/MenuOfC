@@ -12,28 +12,28 @@
 
 void exit(void);
 void welcome(void);
-char lvl = 1;
 
 
 void main(void) {
 	char chapter = 0, problem = 0;
+	char lvl = 1;
 
 
 	welcome();
 	while (lvl!=0) { //²Ëµ¥
 		switch (lvl) {
 			case 1:
-				chapter = levelOne();
+				chapter = levelOne(&lvl);
 				break;
 
 
 			case 2:
-				problem = levelTwo(chapter);
+				problem = levelTwo(chapter, &lvl);
 				break;
 
 
 			case 3:
-				levelThree(chapter, problem);
+				levelThree(chapter, problem, &lvl);
 				break;
 
 

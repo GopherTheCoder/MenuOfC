@@ -2,14 +2,12 @@
 #define levelThree_h
 
 
-void levelThree(char, char);
+void levelThree(char, char, char *);
 
 
-void levelThree(char ch, char prob) {
-	extern char lvl;
+void levelThree(char ch, char prob, char *lvl) {
 	char choice = 3;
 	char str[30];
-	char c;
 
 
 	/* 读取用户选择 */
@@ -24,27 +22,25 @@ void levelThree(char ch, char prob) {
 	/* 传回用户选择 */
 	switch (choice) {
 		case -1:
-			lvl = 2;
-			return 0;
+			*lvl = 2;
+			return;
 
 
 		case 0:
-			lvl = 0;
-			return 0;
+			*lvl = 0;
+			return;
 
 
 		case 1:
-			sprintf(str, ".\\static\\exe\\%d_%d.exe", ch, prob);
 			system("cls");
-			system(str);
+			sprintf(str, ".\\static\\exe\\%d_%d.exe", ch, prob);	system(str); //
 			system("cls");
 			goto choose;
 
 
 		case 2: // 需要整理一下
 			system("cls");
-			sprintf(str, "type .\\static\\codes\\%d_%d.c", ch, prob);
-			system(str);
+			sprintf(str, "type .\\static\\codes\\%d_%d.c", ch, prob);	system(str); //输出源码
 			printf("\n");
 			system("pause");
 			system("cls");
