@@ -51,6 +51,14 @@ void welcome() {
 	system("cls");
 	printf("**********Welcome**********\n");
 	printf("C语言程序设计全书编程题答案目录\n");
+	printf("Developed by Gopher\n");
+	printf("\
+  ███╗   ███╗  ███╗  █╗  █╗ ████╗ ███╗\n\
+ █╔════╝  █╔═══█╗ █╔══█╗ █║  █║ █╔═════╝ █╔══█╗\n\
+ █║ ██╗ █║   █║ ███╔╝ █ ██║ ███╗   ███╔╝\n\
+ █║   █║ █║   █║ █╔═══╝  █╔══█║ █╔═══╝   █╔══█╗\n\
+ ╚███╔╝ ╚███╔╝ █║      █║  █║ ████╗ █║  █║\n\
+  ╚═════╝   ╚═════╝  ╚═╝      ╚═╝  ╚═╝ ╚═══════╝ ╚═╝  ╚═╝\n");
 	printf("按下回车以开始。。。\n");
 	getchar();
 }
