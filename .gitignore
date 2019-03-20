@@ -4,6 +4,7 @@
 #Add by Gopher
 *.sln
 *.vcxproj*
+static/
 
 # User-specific files
 *.suo
