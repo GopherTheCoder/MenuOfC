@@ -12,6 +12,7 @@ void levelThree(char ch, char prob, char *lvl) {
 
 	/* 读取用户选择 */
 	system("cls");
+
 	choose:
 	printf("第%d章 第%d题\n", ch, prob);
 	printf("题目描述\n");
@@ -33,7 +34,8 @@ void levelThree(char ch, char prob, char *lvl) {
 
 		case 1:
 			system("cls");
-			sprintf(str, ".\\static\\exe\\%d_%d.exe", ch, prob);	system(str); //
+			sprintf(str, ".\\static\\exe\\%d_%d.exe", ch, prob);	system(str); // 运行程序
+			system("pause");
 			system("cls");
 			goto choose;
 

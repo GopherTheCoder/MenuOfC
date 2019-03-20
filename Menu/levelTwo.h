@@ -3,7 +3,7 @@
 
 
 char levelTwo(char, char *);
-char chapters[13] = { 2, 0, 1, 4, 4, 8, 6, 7, 4, 5, 4, 4, 1 };
+char chapters[13] = { 1, 0, 1, 4, 4, 8, 6, 7, 2, 1, 1, 0, 0 };
 
 
 char levelTwo(char ch, char *lvl) {
