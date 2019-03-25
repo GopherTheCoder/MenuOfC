@@ -7,14 +7,15 @@ char levelOne(char *);
 
 char levelOne(char *lvl) {
 	char choice = -1, choice_status = 0; // 0:不合法/初始态 1:合法
-
+	char i;
 
 	/* 读取用户选择 */
 	system("cls");
 	choose:
-	printf("**********请选择章节**********\n");
-	printf("本书共13章\n");
-	printf("输入数字以选择对应章节\n");
+	printf("***** 请选择章节 *****\n\n");
+	for (i = 1; i <= 13; i++)
+		printf("    %d.\t第%d章\n", i, i);
+	printf("\n输入数字以选择对应章节\n");
 	printf("输入0退出程序\n");
 	scanf_s("%hhd", &choice);
 

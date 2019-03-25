@@ -48,21 +48,18 @@ void main(void) {
 
 
 void welcome() {
-	char c;
-
 	system("cls");
-	printf("**********Welcome**********\n");
-	printf("C语言程序设计全书编程题答案目录\n");
-	printf("Developed by Gopher\n");
+	printf("**********Welcome**********\n\n");
+	printf("C语言程序设计全书编程题答案\n\n");
+	printf("Developed by Gopher\n\n");
 	printf("\
   ███╗   ███╗  ███╗  █╗  █╗ ████╗ ███╗\n\
  █╔════╝  █╔═══█╗ █╔══█╗ █║  █║ █╔═════╝ █╔══█╗\n\
  █║ ██╗ █║   █║ ███╔╝ █ ██║ ███╗   ███╔╝\n\
  █║   █║ █║   █║ █╔═══╝  █╔══█║ █╔═══╝   █╔══█╗\n\
  ╚███╔╝ ╚███╔╝ █║      █║  █║ ████╗ █║  █║\n\
-  ╚═════╝   ╚═════╝  ╚═╝      ╚═╝  ╚═╝ ╚═══════╝ ╚═╝  ╚═╝\n");
+  ╚═════╝   ╚═════╝  ╚═╝      ╚═╝  ╚═╝ ╚═══════╝ ╚═╝  ╚═╝\n\n");
 	printf("按下回车以开始。。。\n");
-	while ((c = getchar()) != EOF && c != '\n'); // 清除缓冲区
 	getchar();
 }
 
@@ -76,11 +73,13 @@ void confirm() {
 	while ((c = getchar()) != EOF && c != '\n'); // 清除缓冲区
 	choice = getchar();
 	switch (choice) {
+		case 'y':
 		case 'Y': //退出
 			exit();
 
-
+		case 'n':
 		case 'N': //返回主菜单
+			while ((c = getchar()) != EOF && c != '\n'); // 清除缓冲区
 			main();
 
 

@@ -5,6 +5,7 @@
 *.sln
 *.vcxproj*
 static/
+*.vdproj*
 
 # User-specific files
 *.suo
